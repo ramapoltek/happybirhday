@@ -1,67 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  background: #6c63ff;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #fff; /* Improved text contrast */
+}
 
 .card {
-    background: #fdfdfd;
-    border-radius: 4px;
-    height: 85vh;
-    width: 80vw;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adjusted box shadow for depth */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-    overflow: hidden;
+  background: #fdfdfd;
+  border-radius: 4px;
+  height: 85vh;
+  width: 80vw;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adjusted box shadow for depth */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 1000px) {
+  .card {
+    flex-direction: row-reverse;
   }
-  
-  @media only screen and (min-width: 1000px) {
-    .card {
-      flex-direction: row-reverse;
-    }
-    .card img.birthday {
-      width: 100%;
-      max-width: 50vw;
-      max-height: unset;
-    }
+  .card img.birthday {
+    width: 100%;
+    max-width: 50vw;
+    max-height: unset;
   }
-  
-  @media only screen and (max-height: 640px) {
-    .card {
-      flex-direction: row-reverse;
-    }
-    .card img.birthday {
-      width: 100%;
-      max-width: 50vw;
-      max-height: unset;
-    }
+}
+
+@media only screen and (max-height: 640px) {
+  .card {
+    flex-direction: row-reverse;
   }
-  
-  img.birthday {
-    max-height: 40vh;
+  .card img.birthday {
+    width: 100%;
+    max-width: 50vw;
+    max-height: unset;
   }
-  
-  .text {
-    padding: 1em;
-    color: #333; /* Adjusted text color */
+}
+
+img.birthday {
+  max-height: 40vh;
+}
+
+.text {
+  padding: 1em;
+  color: #000000; /* Adjusted text color */
+}
+
+.muted {
+  opacity: 0.8;
+}
+
+.space {
+  height: 100px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .muted {
-    opacity: 0.8;
+  to {
+    opacity: 1;
   }
-  
-  .space {
-    height: 100px;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  body.play-music {
-    animation: fadeIn 2s ease-in-out; /* Adjust the animation duration and timing function as needed */
-  }
+}
+
+body.play-music {
+  animation: fadeIn 2s ease-in-out; /* Adjust the animation duration and timing function as needed */
+}
+h1 {
+  position: absolute;
+  top: 20%;
+  left: 33%;
+  transform:  
+  translate(-50%, -50%);
+  color: #000000;
+  font-family: "Source Sans Pro";
+  font-size: 5em;
+  font-weight: 100;
+  -webkit-user-select: none;
+  user-select: none;
+}
